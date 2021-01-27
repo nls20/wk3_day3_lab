@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Customer Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Customer Orders</h1>
+    {% for order in orders %}
+    <div>
+        <p>
+            {{ order.customer_name}}: <b>{{ order.order_date }}</b>
+        </p>
+    </div>
+    {% endfor %}
+    <img src="https://www.rei.com/dam/content_022717_0731_bike_wheel_choose_lg.jpg" alt="Bike Wheel">
+</body>
+</html>
+
